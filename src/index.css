@@ -1,0 +1,23 @@
+/* Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  background-color: black;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.search_bar input::placeholder{
+  font-weight: bold;
+  color: white;
+}
+
+.search_bar input:focus{
+  outline: none;
+}
