@@ -44,7 +44,7 @@ const Navbar = () => {
             {isAuthenticated&&(
               <>
              <div className="flex items-center space-x-3">
-  <button
+  <Link to="/cart"
     type="button"
     className="relative inline-flex items-center px-4 py-2 font-medium text-white bg-blue-500 rounded-lg"
   >
@@ -53,7 +53,7 @@ const Navbar = () => {
       {cart?.items?.length}
       <span className="sr-only">unread messages</span>
     </span>
-  </button>
+  </Link>
 
   <Link to="/profile" className="px-4 py-2 font-medium text-white bg-blue-500 rounded-lg">
     Profile

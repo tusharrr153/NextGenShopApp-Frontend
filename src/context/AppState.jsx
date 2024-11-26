@@ -194,6 +194,23 @@ const AppState = (props) => {
     }
   };
 
+  //decrease qty
+  const decreaseQty = async (productId,qty) => {
+    try {
+      const api = await axios.post(`${url}/cart/--qty`, {productId,qty},{
+        headers: {
+          "Content-Type": "Application/json",
+          Auth: token,
+        },
+        withCredentials: true,
+      });
+
+      // setCart(api.data.cart);
+    } catch (error) {
+      console.error("Error fetching user cart:", error);
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
